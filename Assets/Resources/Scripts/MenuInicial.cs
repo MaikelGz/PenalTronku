@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; // Necesario para cargar escenas
+using UnityEngine.SceneManagement; 
 
 public class MenuInicial : MonoBehaviour
 {
@@ -16,10 +16,10 @@ public class MenuInicial : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
-    // Método que se llama cuando el botón "Salir" es presionado
+    
     public void SalirJuego()
     {
-        // Cierra el juego. Funciona cuando se ejecuta como una aplicación independiente
+        
         Debug.Log("Saliendo del juego");
         Application.Quit();
     }
