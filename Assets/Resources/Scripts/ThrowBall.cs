@@ -13,6 +13,9 @@ public class ThrowBall : MonoBehaviour
     private Vector3 posicionInicial;  
     private Rigidbody rb;              
 
+  // Nueva referencia para el cambio de cámara
+    public CameraSwitcher cameraSwitcher;  
+
     void Start()
     {
         
@@ -25,6 +28,9 @@ public class ThrowBall : MonoBehaviour
         
         if (Input.GetKey(KeyCode.Space))
         {
+            // Llama al método que cambia la cámara al lanzar la pelota
+            cameraSwitcher.LaunchBallAndSwitchCamera(); 
+
             cargando = true;
             CargarFuerza();
         }
