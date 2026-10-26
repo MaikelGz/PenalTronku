@@ -138,17 +138,6 @@ El proyecto incluye recursos de paquetes y referencias a los siguientes recursos
 
 Consulta las licencias de cada recurso y paquete antes de redistribuirlos fuera de los términos permitidos por sus autores o tiendas.
 
-## Estado y limitaciones conocidas
-
-- Es un proyecto pequeño de carácter experimental/educativo; la configuración actual menciona posibles errores menores.
-- La nota de distribución del proyecto indica que la red de la portería no se muestra correctamente en la build. No se ha documentado aquí una causa técnica confirmada.
-- `ThrowBall` llama a `LaunchBallAndSwitchCamera()` mientras `Espacio` permanece pulsado. Como el método inicia una coroutine en cada llamada, la transición de cámara puede programarse repetidamente durante la carga.
-- El retorno de la pelota se programa tres segundos después de soltar `Espacio`, sin esperar a que la pelota termine de moverse. En función de la duración del disparo, podría reiniciarse antes de que la jugada se resuelva.
-- El gestor de goles avanza de escena al llegar a nueve; el reinicio de `cantidadGoles` que aparece en esa rama no persiste tras la carga de escena.
-- La navegación basada en índices depende del orden de escenas indicado arriba.
-
-Estas observaciones describen el comportamiento visible en los scripts y configuración disponibles; no implican una corrección aplicada al código.
-
 ## Autoría
 
 Proyecto desarrollado por **MaikelGR**. El nombre de producto configurado en Unity es **PenalTronku**.
